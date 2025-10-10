@@ -1,5 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
+
+/* 3D Animation Enhancements */
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.perspective {
+  perspective: 1000px;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
 
 @custom-variant dark (&:is(.dark *));
 
@@ -120,7 +134,6 @@
 }
 
 /* Custom Futuristic Styles */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
 
 * {
   scroll-behavior: smooth;
@@ -135,34 +148,60 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Orbitron', monospace;
 }
 
-/* Glow Effects */
+/* Color Variables */
+:root {
+  /* Primary Colors - Orange & Yellow */
+  --primary-orange: #ff6b35;
+  --primary-orange-light: #ff8c42;
+  --primary-orange-dark: #e55a2b;
+  
+  /* Secondary Colors - Yellow & Gold */
+  --primary-yellow: #fbbf24;
+  --primary-yellow-light: #fcd34d;
+  --primary-yellow-dark: #f59e0b;
+  
+  /* Accent Colors */
+  --accent-gold: #d97706;
+  --accent-amber: #f59e0b;
+  --accent-orange-red: #ea580c;
+  --accent-warm: #fdba74;
+  
+  /* Neutral Colors - Black Based */
+  --neutral-black: #000000;
+  --neutral-dark: #0f0f0f;
+  --neutral-medium: #1a1a1a;
+  --neutral-light: #262626;
+  --neutral-lightest: #404040;
+}
+
+/* Glow Effects with Orange/Yellow Colors */
 .glow-text {
-  text-shadow: 0 0 10px rgba(6, 182, 212, 0.5),
-               0 0 20px rgba(6, 182, 212, 0.3),
-               0 0 30px rgba(6, 182, 212, 0.2);
+  text-shadow: 0 0 10px rgba(251, 191, 36, 0.6),
+               0 0 20px rgba(251, 191, 36, 0.4),
+               0 0 30px rgba(251, 191, 36, 0.2);
 }
 
 .glow-button {
-  box-shadow: 0 0 20px rgba(6, 182, 212, 0.3),
-              0 0 40px rgba(6, 182, 212, 0.1);
+  box-shadow: 0 0 20px rgba(255, 107, 53, 0.4),
+              0 0 40px rgba(251, 191, 36, 0.2);
   transition: all 0.3s ease;
 }
 
 .glow-button:hover {
-  box-shadow: 0 0 30px rgba(6, 182, 212, 0.5),
-              0 0 60px rgba(6, 182, 212, 0.2);
+  box-shadow: 0 0 30px rgba(255, 107, 53, 0.6),
+              0 0 60px rgba(251, 191, 36, 0.3);
   transform: translateY(-2px);
 }
 
 .card-glow {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3),
-              0 0 20px rgba(6, 182, 212, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5),
+              0 0 20px rgba(217, 119, 6, 0.2);
   transition: all 0.3s ease;
 }
 
 .card-glow:hover {
-  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4),
-              0 0 30px rgba(6, 182, 212, 0.2);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.7),
+              0 0 30px rgba(255, 107, 53, 0.3);
   transform: translateY(-5px);
 }
 
@@ -248,14 +287,14 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Additional Particle Effects */
+/* Additional Particle Effects with Orange/Yellow Colors */
 .floating-particles {
   background-image: 
-    radial-gradient(2px 2px at 20px 30px, rgba(6, 182, 212, 0.3), transparent),
-    radial-gradient(2px 2px at 40px 70px, rgba(147, 51, 234, 0.3), transparent),
-    radial-gradient(1px 1px at 90px 40px, rgba(16, 185, 129, 0.3), transparent),
-    radial-gradient(1px 1px at 130px 80px, rgba(6, 182, 212, 0.3), transparent),
-    radial-gradient(2px 2px at 160px 30px, rgba(147, 51, 234, 0.3), transparent);
+    radial-gradient(2px 2px at 20px 30px, rgba(255, 107, 53, 0.4), transparent),
+    radial-gradient(2px 2px at 40px 70px, rgba(251, 191, 36, 0.4), transparent),
+    radial-gradient(1px 1px at 90px 40px, rgba(217, 119, 6, 0.3), transparent),
+    radial-gradient(1px 1px at 130px 80px, rgba(255, 107, 53, 0.3), transparent),
+    radial-gradient(2px 2px at 160px 30px, rgba(251, 191, 36, 0.3), transparent);
   background-repeat: repeat;
   background-size: 200px 100px;
   animation: sparkle 20s linear infinite;
@@ -270,22 +309,22 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Custom Scrollbar */
+/* Custom Scrollbar with Orange/Yellow Colors */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(15, 23, 42, 0.8);
+  background: rgba(0, 0, 0, 0.8);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, rgba(6, 182, 212, 0.8), rgba(147, 51, 234, 0.8));
+  background: linear-gradient(180deg, rgba(255, 107, 53, 0.8), rgba(251, 191, 36, 0.8));
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, rgba(6, 182, 212, 1), rgba(147, 51, 234, 1));
+  background: linear-gradient(180deg, rgba(255, 107, 53, 1), rgba(251, 191, 36, 1));
 }
 
 /* Navigation Backdrop Blur */
